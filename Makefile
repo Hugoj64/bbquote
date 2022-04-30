@@ -11,8 +11,8 @@ black:
 	@black scripts/* mlproject/*.py
 
 test:
-	@coverage run -m pytest tests/*.py
-	@coverage report -m --omit="${VIRTUAL_ENV}/lib/python*"
+	@coverage run -m pytest tests/test_*.py
+	@coverage report -m --omit="${VIRTUAL_ENV}/lib/python*,*__init__*"
 
 ftest:
 	@Write me
